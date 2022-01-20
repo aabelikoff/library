@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Arvo&family=Birthstone&family=Readex+Pro:wght@200;400&family=Rouge+Script&family=Varela+Round&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(200, 195, 215,0.7);
+    background-image: url('images/eli-francis.jpg');
+    background-repeat: repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.panel {
+    flex: 0 1 auto;
+    width: 200px;
+    height: 100%;
+    /*background-color: rgb(245, 210, 200);
+    background-image: url('images/tim-wildsmith.jpg');*/
+    margin: 0 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.panel > div, form{
+    width: 100%;
+    /*border: 1px solid white;*/
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.panel form {
+    background-color: rgba(90,200,200,0.7);
+}
+
+.logo {
+    height: 100px;
+    font-family: 'Birthstone', cursive, 'Rouge Script', cursive;
+    font-size: 300%;
+    font-size: 300%;
+    color: #d9d5d6;
+    background-color: #8199b196;
+}
+.info {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(90,200,200,0.7);
+    border-radius: 20px;
+    color: #f9e6a1;
+}
+
+.info, .panel form {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bold;
+}
+
+.panel form p{
+    margin-bottom:0;
+    padding-left: 5px;
+    color: #f9e6a1;
+}
+.panel form div{
+    color: #e3dfdc;
+}
+.content {
+    flex: 1 1 0;
+    /*background-color: pink;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+}
+
+.infobook {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    font-size: 130%;
+}
+
+form p{
+    margin-bottom: 20px;
+}
+
+#add, .popup-content > div input {
+    align-self: center;
+    margin-top: 20%;
+    padding: 3%;
+    width: 80%;
+    height: 40px;
+    background-color: rgba(59, 92, 122, 0.452);
+    color: white;
+    border-radius: 10px;
+    font-size: larger;
+}
+.popup-content > div input {
+    margin: auto;
+    width: 120px;
+}
+
+#add:hover, .popup-content > div input:hover {
+    background-color: rgba(247, 217, 162, 0.452);
+}
+
+.singleBook {
+    background-color: rgb(230, 228, 229, 0.8);
+    box-shadow: 0px 0px 10px white;
+    margin-top: 5px;
+    border-radius: 7px;
+    height: 50px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.singleBook p{
+    display: inline-block;
+    width: 330px;
+}
+.singleBook button {
+    width: 80px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0px 0px 6px powderblue;
+    font-size: 110%;
+    color: deepskyblue;
+}
+
+.popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.popup-content{
+    width:300px;
+    height: 420px;
+    background-color: rgba(178, 216, 216, 0.815);
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+.infobook p{
+    flex: 1 0 auto;
+    margin: 0;
+    padding: 10px;
+}
+
+.text {
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: cadetblue;
+    font-size: 120%;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js">
+    </script>
+    <title>iLibrary</title>
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <div class='logo'>iLIBRARY</div>
+            <div class="info">
+                <p>Books in library: </p>
+                <p>Read books: </p>
+                <p>Unread books: </p>
+            </div>
+            <form name='sort' >
+                <p>Sort:</p>
+                <div><input type="radio" name="order" value='author' id="sort1"> by author</div>
+                <div><input type="radio" name="order" value='title' id="sort2"> by title</div>
+                <div><input type="radio" name="order" value='position' id="sort3" checked> by adding</div>
+            </form>
+            <form name='display'>
+                <p>Display:</p>
+                <div><input type="radio" name="filter" value='all' checked> all books </div>
+                <div><input type="radio" name="filter" value='read'> read books </div>
+                <div><input type="radio" name="filter" value='unread'> unread books </div>
+            </form>
+            <button id="add">Add new book</button>
+        </div>
+        <div class="content">
+            <div class="list"></div>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <form name="bookinfo" class="infobook">
+                <p> Title:<br>
+                    <input name="title" type="text" size="17" class="text"> 
+                </p>
+                <p> Author:<br>
+                    <input name="author" type="text" size="17" class="text"> 
+                </p>
+                <p> Pages:<br>
+                    <input name="pages" type="text" size="17" class="text"> 
+                </p>
+                <p> Is read:<br>
+                    <input type="radio" name="isread" value="read" checked>  yes<br>
+                    <input type="radio" name="isread" value="unread">  no
+                </p>
+                
+            </form>
+            <div>
+                <input type="submit" value="submit">
+                <input type="reset" value="cancel">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
