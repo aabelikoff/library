@@ -15,24 +15,27 @@
     justify-content: flex-start;
     align-items: stretch;
 }
-
 .panel {
     flex: 0 1 auto;
     width: 200px;
     height: 100%;
-    /*background-color: rgb(245, 210, 200);
-    background-image: url('images/tim-wildsmith.jpg');*/
     margin: 0 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
+    position: fixed;
+}
+.empty {
+    flex: 0 1 auto;
+    width: 200px;
+    height: 100%;
+    margin: 0 20px;
+    padding: 10px;
 }
 .panel > div, form{
     width: 100%;
-    /*border: 1px solid white;*/
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -62,6 +65,7 @@
 .info, .panel form {
     font-family: 'Architects Daughter', cursive;
     font-weight: bold;
+    font-size: 105%;
 }
 
 .panel form p{
@@ -74,7 +78,6 @@
 }
 .content {
     flex: 1 1 0;
-    /*background-color: pink;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -123,9 +126,9 @@ form p{
 .singleBook {
     background-color: rgb(230, 228, 229, 0.8);
     box-shadow: 0px 0px 10px white;
-    margin-top: 5px;
+    margin-top: 10px;
     border-radius: 7px;
-    height: 50px;
+    min-height: 50px;
     width: 500px;
     display: flex;
     flex-direction: row;
@@ -139,6 +142,9 @@ form p{
 .singleBook p{
     display: inline-block;
     width: 330px;
+    font-family: cursive;
+    font-size: 120%;
+    color: #124344;
 }
 .singleBook button {
     width: 80px;
@@ -150,6 +156,9 @@ form p{
     color: deepskyblue;
 }
 
+.singleBook button:hover{
+    background-color: #3c77998c;
+}
 .popup{
     width:100%;
     min-height:100%;
@@ -161,6 +170,18 @@ form p{
     align-items: center;
     justify-content: center;
 }
+.alert {
+    padding-top: 10px;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(209, 72, 72, 0.815);
+    color: white;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+    position: fixed;
+}
+
 .popup-content{
     width:300px;
     height: 420px;
@@ -199,8 +220,3 @@ form p{
     justify-content: flex-start;
     align-items: flex-start;
 }
-
-
-
-
-

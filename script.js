@@ -34,7 +34,6 @@ function removeBookFromLibrary (index){
 function sortBooks(order){
     myLibrary.sort((a,b)=> a[order] > b[order] ? 1 : -1);
 }
-
 //displays 1 book in library by adding a DOM-element
 function displayOneBook (elem){
     let d = document.createElement('div');
@@ -57,7 +56,6 @@ function displayOneBook (elem){
         showInfoPopup(parseInt(e.target.getAttribute('data-key')));
     });
     d.classList.add('singleBook');
-    
     let list = document.querySelector('.list');
     list.appendChild(d);
     d.appendChild(p); 
@@ -68,6 +66,7 @@ function displayOneBook (elem){
 function displayBooks(){
     let list = document.querySelector('.list');
     clearList(list);
+    showInfo();
     myLibrary.forEach(elem => {
         if (filterBook(elem,document.forms.display.filter.value)){ //if we had a filter
             displayOneBook(elem);
@@ -107,7 +106,7 @@ function showInfoPopup (index){
     })
     document.querySelector('.popup-content > div input').setAttribute('data-key',index);
 };
-
+//Buttons in popup form
 let popupButtons = Array.from(document.querySelectorAll('.popup-content > div input'));
 popupButtons.forEach(element => {
     element.addEventListener('click',(e)=>{
@@ -151,7 +150,6 @@ let filterRadio = Array.from(document.forms.display.filter);
 filterRadio.forEach (elem => {
     elem.addEventListener('click', displayBooks);
 });
-
 //clearing list of books
 function clearList(node){
     node.textContent = '';
@@ -178,20 +176,35 @@ function bookinfoValidation () {
     let author = document.forms.bookinfo.author;
     let pages = document.forms.bookinfo.pages;
     if (!formValidationText(title)){
-        alert(`Check title input!`);
+        showAlert(alertMessage(document.forms.bookinfo.title,'Check title input!'));
         return false;
     }
     else if (!formValidationText(author)){
-        alert(`Check author input!`);
+        showAlert(alertMessage(document.forms.bookinfo.author,'Check author input!'));
         return false;
     }
     else if (!formValidationNumber(pages)){
-        alert(`Check pages input!`);
+        showAlert(alertMessage(document.forms.bookinfo.pages,'Check pages input!'));
         return false;
     }
     else {
         return true;
     }
+};
+//function returns error message if validation is not proved
+function alertMessage (elem, message) {
+    let alert = document.createElement('div');
+    alert.classList.add('alert');
+    alert.textContent = message;
+    let coords = elem.getBoundingClientRect();
+    alert.style.left = (coords.left+100) + 'px';
+    alert.style.top = (coords.top-40) + 'px';
+    return alert;
+};
+//function shows alert message if validation falls
+function showAlert (alert) {
+    document.querySelector('body').appendChild(alert);
+    setTimeout(()=>alert.remove(),500);
 };
 //clearing popup form
 function clearBookinfoForm (){
@@ -205,12 +218,7 @@ function showInfo () {
     let unread = myLibrary.reduce(function (sum,elem){
         return elem.read === 'unread' ? ++sum : sum; 
     },0);
-
     document.querySelectorAll('.info p')[0].textContent = `Books in library: ${myLibrary.length}`;
     document.querySelectorAll('.info p')[1].textContent = `Read books: ${read}`;
     document.querySelectorAll('.info p')[2].textContent = `Unread books: ${unread}`;
 }
-
-
-
-

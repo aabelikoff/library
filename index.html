@@ -10,29 +10,30 @@
     <title>iLibrary</title>
 </head>
 <body>
-    <div class="container">
-        <div class="panel">
-            <div class='logo'>iLIBRARY</div>
-            <div class="info">
-                <p>Books in library: </p>
-                <p>Read books: </p>
-                <p>Unread books: </p>
-            </div>
-            <form name='sort' >
-                <p>Sort:</p>
-                <div><input type="radio" name="order" value='author' id="sort1"> by author</div>
-                <div><input type="radio" name="order" value='title' id="sort2"> by title</div>
-                <div><input type="radio" name="order" value='position' id="sort3" checked> by adding</div>
-            </form>
-            <form name='display'>
-                <p>Display:</p>
-                <div><input type="radio" name="filter" value='all' checked> all books </div>
-                <div><input type="radio" name="filter" value='read'> read books </div>
-                <div><input type="radio" name="filter" value='unread'> unread books </div>
-            </form>
-            <button id="add">Add new book</button>
+    <div class="panel">
+        <div class='logo'>iLIBRARY</div>
+        <div class="info">
+            <p>Books in library: </p>
+            <p>Read books: </p>
+            <p>Unread books: </p>
         </div>
-        <div class="content">
+        <form name='sort' >
+            <p>Sort:</p>
+            <div><input type="radio" name="order" value='author' id="sort1"> by author</div>
+            <div><input type="radio" name="order" value='title' id="sort2"> by title</div>
+            <div><input type="radio" name="order" value='position' id="sort3" checked> by adding</div>
+        </form>
+        <form name='display'>
+            <p>Display:</p>
+            <div><input type="radio" name="filter" value='all' checked> all books </div>
+            <div><input type="radio" name="filter" value='read'> read books </div>
+            <div><input type="radio" name="filter" value='unread'> unread books </div>
+        </form>
+        <button id="add">Add new book</button>
+    </div>
+    <div class="container">
+        <div class = "empty"></div>
+        <div class ="content">
             <div class="list"></div>
         </div>
     </div>
@@ -60,7 +61,5 @@
             </div>
         </div>
     </div>
-
-
 </body>
 </html>
